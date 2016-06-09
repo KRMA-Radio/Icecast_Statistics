@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>KRMA Radio Admin Panel</title>
+	<link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="img/ico" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,800' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<!-- Definitely going to want to make the admin panel password protected. -->
+    <!-- Maybe store session information so people with admin privileges retain the link, even in the ratings view (no one else sees it) -->
+    <div id="header">
+    <img src="images/logo-banner.png" alt="Welsome to KRMA Internet Radio" id="logo">
+        <!-- Buttons to switch back and forth between admin panel and show ratings views. --> 
+        <div id="nav_li">
+            <a href="#">Ratings Panel</a>
+            <a href="admin.html">Admin Panel</a>
+        </div>
+        
+	</div>
+
+	<!--<div id="nav"> #Do we even need a navigation bar? 
+	Show 1<br>
+	Show 2<br>
+	show 3
+	</div> -->
+
+	<div id="section">
+        <!-- Dynamically generate these using database entries. -->
+        <div id="show">
+            <!-- Creating a table inside a table? -->
+            <table style="100%">
+                <tr>
+                    <th><h1>Show 1</h1></th>
+                    <th></th> <!-- Blank table headers to generate extra columns. Not sure if necessary -->
+                    <th></th> <!-- Blank table headers to generate extra columns. Not sure if necessary -->
+                </tr>
+                <tr>
+                    <td>
+                        <img src="images/maggie.jpg">
+                    </td>
+                    <td>
+                        <!-- Display show / host image (float: left) dimensions h=300px by w=400px -->
+                        <table border="1px" style="width:100%">
+                            <tr>
+                                <th>Show day</th>
+                                <th>Show Begin Time</th>
+                                <th>Show End Time</th>
+                            </tr>
+                                                <tr>
+                                    <td>
+                                        Current: Input var
+                                    </td>
+                                    <td>
+                                        Current: Input var
+                                    </td>
+                                    <td>
+                                        Current: Input var
+                                    </td>
+                                </tr>
+                            <tr>
+                                <td>
+                                    <center><select name="showDay">
+                                          <option value="1">Monday</option>
+                                          <option value="2">Tuesday</option>
+                                          <option value="3">Wednesday</option>
+                                          <option value="4">Thursday</option>
+                                          <option value="5">Friday</option>
+                                          <option value="6">Saturday</option>
+                                          <option value="7">Sunday</option>
+                                     </select></center>
+                                </td>
+                                <td> <!-- Could /should be generated using Javascript or Python -->
+                                     <center><select name="beginTime">
+                                          <option value="00">00:00</option>
+                                          <option value="01">01:00</option>
+                                          <option value="02">02:00</option>
+                                          <option value="03">03:00</option>
+                                          <option value="04">04:00</option>
+                                          <option value="05">05:00</option>
+                                          <option value="06">06:00</option>
+                                          <option value="07">07:00</option>
+                                          <option value="08">08:00</option>
+                                          <option value="09">09:00</option>
+                                          <option value="10">10:00</option>
+                                          <option value="11">11:00</option>
+                                          <option value="12">12:00</option>
+                                          <option value="13">13:00</option>
+                                          <option value="14">14:00</option>
+                                          <option value="15">15:00</option>
+                                          <option value="16">16:00</option>
+                                          <option value="17">17:00</option>
+                                          <option value="18">18:00</option>
+                                          <option value="19">19:00</option>
+                                          <option value="20">20:00</option>
+                                          <option value="21">21:00</option>
+                                          <option value="22">22:00</option>
+                                          <option value="23">23:00</option>
+                                     </select></center>
+                                </td>
+                                <td>
+                                     <center><select name="endTime">
+                                          <option value="00">00:00</option>
+                                          <option value="01">01:00</option>
+                                          <option value="02">02:00</option>
+                                          <option value="03">03:00</option>
+                                          <option value="04">04:00</option>
+                                          <option value="05">05:00</option>
+                                          <option value="06">06:00</option>
+                                          <option value="07">07:00</option>
+                                          <option value="08">08:00</option>
+                                          <option value="09">09:00</option>
+                                          <option value="10">10:00</option>
+                                          <option value="11">11:00</option>
+                                          <option value="12">12:00</option>
+                                          <option value="13">13:00</option>
+                                          <option value="14">14:00</option>
+                                          <option value="15">15:00</option>
+                                          <option value="16">16:00</option>
+                                          <option value="17">17:00</option>
+                                          <option value="18">18:00</option>
+                                          <option value="19">19:00</option>
+                                          <option value="20">20:00</option>
+                                          <option value="21">21:00</option>
+                                          <option value="22">22:00</option>
+                                          <option value="23">23:00</option>
+                                     </select></center>
+                                </td>
+                            </td>
+                            </table>
+                        <td><input type="submit" value="Submit"></td>
+                        </tr>
+                    </tr>         
+                </table>
+            </table>
+        </div>
+	</div>
+
+	<div id="footer">
+    <p>This system was set up for the station and hosts to get an idea of listener numbers. Please refer to <a     href='http://stats.krmaradio.com/'>stats.krmaradio.com/</a> for more detailed listener statistics.</p>
+	<div id="footer_credit">Created by <span style="color:#00a651">Wunderkind Technologies</span></div> <!-- Make into link? -->
+	</div>
+
+</body> 
+</html>
